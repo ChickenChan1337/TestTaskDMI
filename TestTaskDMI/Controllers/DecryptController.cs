@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using TestTaskDMI.Contracts;
 using TestTaskDMI.Core.Interfaces;
 
 namespace TestTaskDMI.Controllers
@@ -21,10 +20,7 @@ namespace TestTaskDMI.Controllers
         /// <param name="contract"></param>
         /// <returns>Result of calculation encrypted by Caesar</returns>
         [HttpGet("DecryptAsync")]
-        public async Task<CalculatorResponseContract> DecryptAsync(string value)
-        {
-            var serviceResult = await _decryptService.DecryptAsync(value);
-            return new CalculatorResponseContract(serviceResult);
-        }
+        public async Task<string> DecryptAsync(string value)
+            => await _decryptService.DecryptAsync(value);
     }
 }
