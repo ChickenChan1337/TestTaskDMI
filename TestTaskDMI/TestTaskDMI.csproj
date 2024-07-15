@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Contracts\TestTaskDMI.Contracts.csproj" />
+    <ProjectReference Include="..\TestTaskDMI.Contracts\TestTaskDMI.Contracts.csproj" />
     <ProjectReference Include="..\TestTaskDMI.Service\TestTaskDMI.Service.csproj" />
   </ItemGroup>
 
