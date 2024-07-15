@@ -16,7 +16,7 @@ namespace TestTaskDMI.Controllers
         }
 
         /// <summary>
-        /// Add first value with second value
+        /// Decrypt value with Caesar
         /// </summary>
         /// <param name="contract"></param>
         /// <returns>Result of calculation encrypted by Caesar</returns>
