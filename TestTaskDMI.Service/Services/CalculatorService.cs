@@ -1,57 +1,64 @@
-﻿using TestTaskDMI.Service.Helper;
+﻿using TestTaskDMI.Core.Interfaces;
 using TestTaskDMI.Service.Models;
 
 namespace TestTaskDMI.Service.Services
 {
-    public class CalculatorService
+    public class CalculatorService : ICalculatorService
     {
-
         /// <summary>
         /// Add first value with second value
+        /// exemplified as an asynchronous process
         /// </summary>
         /// <param name="model"></param>
         /// <returns>Result of calculation encrypted by Caesar</returns>
-        public async Task<string> Addition(CalculatorModel model)
+        public async Task<decimal> Addition(CalculatorModel model)
         {
-            var calculationResult = model.FirstValue + model.SecondValue;
-
-            return await Caesar.AsyncEncrypt(calculationResult.ToString());
+            return await Task.Run(() =>
+            {
+                return model.FirstValue + model.SecondValue;
+            });
         }
 
         /// <summary>
         /// Substract first value with second value
+        /// exemplified as an asynchronous process
         /// </summary>
         /// <param name="model"></param>
         /// <returns>Result of calculation encrypted by Caesar</returns>
-        public async Task<string> Substraction(CalculatorModel model)
+        public async Task<decimal> Substraction(CalculatorModel model)
         {
-            var calculationResult = model.FirstValue - model.SecondValue;
-
-            return await Caesar.AsyncEncrypt(calculationResult.ToString());
+            return await Task.Run(() =>
+            {
+                return model.FirstValue - model.SecondValue;
+            });
         }
 
         /// <summary>
         /// Multiply first value with second value
+        /// exemplified as an asynchronous process
         /// </summary>
         /// <param name="model"></param>
         /// <returns>Result of calculation encrypted by Caesar</returns>
-        public async Task<string> Multiply(CalculatorModel model)
+        public async Task<decimal> Multiply(CalculatorModel model)
         {
-            var calculationResult = model.FirstValue * model.SecondValue;
-
-            return await Caesar.AsyncEncrypt(calculationResult.ToString());
+            return await Task.Run(() =>
+            {
+                return model.FirstValue * model.SecondValue;
+            });
         }
 
         /// <summary>
         /// Divide first value with second value
+        /// exemplified as an asynchronous process
         /// </summary>
         /// <param name="model"></param>
         /// <returns>Result of calculation encrypted by Caesar</returns>
-        public async Task<string> Divide(CalculatorModel model)
+        public async Task<decimal> Divide(CalculatorModel model)
         {
-            var calculationResult = model.FirstValue / model.SecondValue;
-
-            return await Caesar.AsyncEncrypt(calculationResult.ToString());
+            return await Task.Run(() =>
+            {
+                return model.FirstValue / model.SecondValue;
+            });
         }
     }
 }

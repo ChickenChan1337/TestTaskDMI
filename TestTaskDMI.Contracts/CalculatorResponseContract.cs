@@ -12,5 +12,10 @@
         {
             ResultValue = result;
         }
+
+        public CalculatorResponseContract(decimal result)
+        {
+            ResultValue = result.ToString();
+        }
     }
 }

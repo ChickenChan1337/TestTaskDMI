@@ -7,13 +7,13 @@ namespace TestTaskDMI.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class CalculatorController : ControllerBase
+    public class EncryptedCalculatorController : ControllerBase
     {
-        private readonly ICalculatorService _calculatorService;
+        private readonly IEncryptedCalculatorService _encryptedCalculatorService;
 
-        public CalculatorController(ICalculatorService calculatorService)
+        public EncryptedCalculatorController(IEncryptedCalculatorService encryptedCalculatorService)
         {
-            _calculatorService = calculatorService;
+            _encryptedCalculatorService = encryptedCalculatorService;
         }
 
         /// <summary>
@@ -25,7 +25,7 @@ namespace TestTaskDMI.Controllers
         public async Task<CalculatorResponseContract> Addition(CalculatorRequestContract contract)
         {
             var model = CalculatorModelMapper.Map(contract);
-            var serviceResult = await _calculatorService.Addition(model);
+            var serviceResult = await _encryptedCalculatorService.Addition(model);
             return new CalculatorResponseContract(serviceResult);
         }
 
@@ -38,7 +38,7 @@ namespace TestTaskDMI.Controllers
         public async Task<CalculatorResponseContract> Substraction(CalculatorRequestContract contract)
         {
             var model = CalculatorModelMapper.Map(contract);
-            var serviceResult = await _calculatorService.Substraction(model);
+            var serviceResult = await _encryptedCalculatorService.Substraction(model);
             return new CalculatorResponseContract(serviceResult);
         }
 
@@ -51,7 +51,7 @@ namespace TestTaskDMI.Controllers
         public async Task<CalculatorResponseContract> Multiply(CalculatorRequestContract contract)
         {
             var model = CalculatorModelMapper.Map(contract);
-            var serviceResult = await _calculatorService.Multiply(model);
+            var serviceResult = await _encryptedCalculatorService.Multiply(model);
             return new CalculatorResponseContract(serviceResult);
         }
 
@@ -64,7 +64,7 @@ namespace TestTaskDMI.Controllers
         public async Task<CalculatorResponseContract> Divide(CalculatorRequestContract contract)
         {
             var model = CalculatorModelMapper.Map(contract);
-            var serviceResult = await _calculatorService.Divide(model);
+            var serviceResult = await _encryptedCalculatorService.Divide(model);
             return new CalculatorResponseContract(serviceResult);
         }
     }
