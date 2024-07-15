@@ -1,0 +1,6 @@
+@TestTaskDMI_HostAddress = http://localhost:5031
+
+GET {{TestTaskDMI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
