@@ -11,7 +11,7 @@ namespace TestTaskDMI.Service.Services
         /// </summary>
         /// <param name="model"></param>
         /// <returns>Result of calculation encrypted by Caesar</returns>
-        public async Task<decimal> Addition(CalculatorModel model)
+        public async Task<decimal> AdditionAsync(CalculatorModel model)
         {
             return await Task.Run(() =>
             {
@@ -25,7 +25,7 @@ namespace TestTaskDMI.Service.Services
         /// </summary>
         /// <param name="model"></param>
         /// <returns>Result of calculation encrypted by Caesar</returns>
-        public async Task<decimal> Substraction(CalculatorModel model)
+        public async Task<decimal> SubstractionAsync(CalculatorModel model)
         {
             return await Task.Run(() =>
             {
@@ -39,7 +39,7 @@ namespace TestTaskDMI.Service.Services
         /// </summary>
         /// <param name="model"></param>
         /// <returns>Result of calculation encrypted by Caesar</returns>
-        public async Task<decimal> Multiply(CalculatorModel model)
+        public async Task<decimal> MultiplyAsync(CalculatorModel model)
         {
             return await Task.Run(() =>
             {
@@ -53,7 +53,7 @@ namespace TestTaskDMI.Service.Services
         /// </summary>
         /// <param name="model"></param>
         /// <returns>Result of calculation encrypted by Caesar</returns>
-        public async Task<decimal> Divide(CalculatorModel model)
+        public async Task<decimal> DivideAsync(CalculatorModel model)
         {
             return await Task.Run(() =>
             {

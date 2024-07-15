@@ -9,27 +9,27 @@ namespace TestTaskDMI.Core.Interfaces
         /// </summary>
         /// <param name="model"></param>
         /// <returns>Result of calculation</returns>
-        Task<decimal> Addition(CalculatorModel model);
+        Task<decimal> AdditionAsync(CalculatorModel model);
 
         /// <summary>
         /// Substract first value with second value
         /// </summary>
         /// <param name="model"></param>
         /// <returns>Result of calculation</returns>
-        Task<decimal> Substraction(CalculatorModel model);
+        Task<decimal> SubstractionAsync(CalculatorModel model);
 
         /// <summary>
         /// Multiply first value with second value
         /// </summary>
         /// <param name="model"></param>
         /// <returns>Result of calculation</returns>
-        Task<decimal> Multiply(CalculatorModel model);
+        Task<decimal> MultiplyAsync(CalculatorModel model);
 
         /// <summary>
         /// Divide first value with second value
         /// </summary>
         /// <param name="model"></param>
         /// <returns>Result of calculation</returns>
-        Task<decimal> Divide(CalculatorModel model);
+        Task<decimal> DivideAsync(CalculatorModel model);
     }
 }

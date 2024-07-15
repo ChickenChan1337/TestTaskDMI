@@ -10,6 +10,7 @@ builder.Services.AddControllers();
 
 builder.Services.AddSingleton<ICalculatorService, CalculatorService>();
 builder.Services.AddSingleton<IEncryptedCalculatorService, EncryptedCalculatorService>();
+builder.Services.AddSingleton<IDecryptService, DecryptService>();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

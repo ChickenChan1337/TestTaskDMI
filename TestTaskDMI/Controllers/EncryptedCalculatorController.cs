@@ -21,11 +21,11 @@ namespace TestTaskDMI.Controllers
         /// </summary>
         /// <param name="contract"></param>
         /// <returns>Result of calculation encrypted by Caesar</returns>
-        [HttpPost("Addition")]
-        public async Task<CalculatorResponseContract> Addition(CalculatorRequestContract contract)
+        [HttpPost("AdditionAsync")]
+        public async Task<CalculatorResponseContract> AdditionAsync(CalculatorRequestContract contract)
         {
             var model = CalculatorModelMapper.Map(contract);
-            var serviceResult = await _encryptedCalculatorService.Addition(model);
+            var serviceResult = await _encryptedCalculatorService.AdditionAsync(model);
             return new CalculatorResponseContract(serviceResult);
         }
 
@@ -34,11 +34,11 @@ namespace TestTaskDMI.Controllers
         /// </summary>
         /// <param name="contract"></param>
         /// <returns>Result of calculation encrypted by Caesar</returns>
-        [HttpPost("Substraction")]
-        public async Task<CalculatorResponseContract> Substraction(CalculatorRequestContract contract)
+        [HttpPost("SubstractionAsync")]
+        public async Task<CalculatorResponseContract> SubstractionAsync(CalculatorRequestContract contract)
         {
             var model = CalculatorModelMapper.Map(contract);
-            var serviceResult = await _encryptedCalculatorService.Substraction(model);
+            var serviceResult = await _encryptedCalculatorService.SubstractionAsync(model);
             return new CalculatorResponseContract(serviceResult);
         }
 
@@ -47,11 +47,11 @@ namespace TestTaskDMI.Controllers
         /// </summary>
         /// <param name="contract"></param>
         /// <returns>Result of calculation encrypted by Caesar</returns>
-        [HttpPost("Multiply")]
-        public async Task<CalculatorResponseContract> Multiply(CalculatorRequestContract contract)
+        [HttpPost("MultiplyAsync")]
+        public async Task<CalculatorResponseContract> MultiplyAsync(CalculatorRequestContract contract)
         {
             var model = CalculatorModelMapper.Map(contract);
-            var serviceResult = await _encryptedCalculatorService.Multiply(model);
+            var serviceResult = await _encryptedCalculatorService.MultiplyAsync(model);
             return new CalculatorResponseContract(serviceResult);
         }
 
@@ -60,11 +60,11 @@ namespace TestTaskDMI.Controllers
         /// </summary>
         /// <param name="contract"></param>
         /// <returns>Result of calculation encrypted by Caesar</returns>
-        [HttpPost("Divide")]
-        public async Task<CalculatorResponseContract> Divide(CalculatorRequestContract contract)
+        [HttpPost("DivideAsync")]
+        public async Task<CalculatorResponseContract> DivideAsync(CalculatorRequestContract contract)
         {
             var model = CalculatorModelMapper.Map(contract);
-            var serviceResult = await _encryptedCalculatorService.Divide(model);
+            var serviceResult = await _encryptedCalculatorService.DivideAsync(model);
             return new CalculatorResponseContract(serviceResult);
         }
     }
