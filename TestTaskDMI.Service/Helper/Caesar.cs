@@ -4,6 +4,11 @@
     {
         private const int shift = 4;
 
+        /// <summary>
+        /// Caesar encryption, exemplified as an asynchronous process
+        /// </summary>
+        /// <param name="input">input should be your result of the calculation as a string</param>
+        /// <returns>encrypted result</returns>
         public static async Task<string> AsyncEncrypt(string input)
         {
             return await Task.Run(() =>
